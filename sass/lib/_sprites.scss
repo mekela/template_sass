@@ -1,6 +1,3 @@
-//  sprites with padding
-$icons: sprite-map("icons/*.png", $spacing: 10px);
-
 // sized sprites
 @mixin image-size($path){
 	width: image-width($path);
@@ -23,13 +20,4 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 //only image, when dimensions are useless
 @mixin si($sprite, $map: $icons){
 	background: sprite($map, $sprite) no-repeat;
-}
-// insert svg
-@mixin svg($name, $width, $height){
-	background: url('../img/svg/#{$name}.svg') no-repeat 0 0;
-	@include background-size(#{$width}px #{$height}px);
-	// background-image: inline-image('svg/#{$name}.svg','image/svg');
-	width: #{$width}px;
-	height: #{$height}px;
-	display: inline-block;
 }

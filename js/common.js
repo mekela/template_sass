@@ -10,4 +10,12 @@ $(document).ready(function() {
 	
 	//placeholder
 	$('input[placeholder], textarea[placeholder]').placeholder();
+
+	//bxslider
+	$('.bxslider').bxSlider({
+	  nextSelector: '#slider-next',
+	  prevSelector: '#slider-prev',
+	  nextText: 'Onward →',
+	  prevText: '← Go back'
+	});
 });
