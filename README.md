@@ -21,7 +21,8 @@ Sass шаблон
 Назви класів і т.д.
 =============
 Стандартний вигляд шаблону:
-`<div class="wrapper">
+```
+<div class="wrapper">
 <!--header-->
 <header class="header">
 </header>
@@ -32,7 +33,8 @@ Sass шаблон
 </div>
 <footer class="footer">
 </footer>
-</div>`
+</div>
+```
 
 `.wrapper` - Обгортка сайту
 
@@ -42,60 +44,72 @@ Sass шаблон
 =============
 Основні теги html5 повинні бути з класами, і до класів має йти привязка стилей.
 Наприклад: 
+```
 nav{color:black;} - поганий тон;
 nav.nav{color:black;} - хороший тон;
+```
 
 JS
 =============
 Я використовую такі плагіни для цього шаблону:
-`placeholder` - Підтримка placeholder в старих браузерах
-`fancybox` - Стандартне модальне вікно, використовується на 90% сайтах.
-`modernizr` - Підтримка старих браузерів
-`bxslider` - Один з найкращих слайдерів
+* `placeholder` - Підтримка placeholder в старих браузерах
+* `fancybox` - Стандартне модальне вікно, використовується на 90% сайтах.
+* `modernizr` - Підтримка старих браузерів
+* `bxslider` - Один з найкращих слайдерів
 
 Всі свої скрипти потрібно писати в файлі common.js
 
 Методологія 
 =============
-_wrapper - головний батьківський блок
-_inner - батьківський блок
-_block - дочірній блок
-_item - найменший дочірній блок 
+* _wrapper - головний батьківський блок
+* _inner - батьківський блок
+* _block - дочірній блок
+* _item - найменший дочірній блок 
 
 Приклад:
-`<div class="contacts_wrapper">
+```
+<div class="contacts_wrapper">
 	<div class="contacts_inner">
 		<div class="contacts_block">
 			<div class="contacts_item">City, Phone</div>
 		</div>
 	</div>
 </div>
-</div>`
+</div>
+```
 
 Загальні правила
 =============
 Якщо ваш клас використовується в javascript, то пишіть його з префіксом js-, наприклад:
+
 `<div class="contacts_item js-show">City, Phone</div>`
 
 Якщо ви модифікуєте якийсь готовий елемент своїми стилями, давайте йому назву стилей які ви використовуєте:
+
 `<div class="contacts_item color_red">City, Phone</div>`
+
 або
+
 `<div class="contacts_item bg_red">City, Phone</div>`
 
 Всі великі блоки повинні бути відзначенні коментами, де початок, а де кінець:
-`<!--header-->
+```
+<!--header-->
 <header class="header">
 	
 </header>
-<!--end-header-->`
+<!--end-header-->
+```
 
 Так само і css:
-`/*----header-----*/
+
+```
+/*----header-----*/
 .header {
   width: 1000px;
 }
-/*----end header-----*/`
-
+/*----end header-----*/
+```
 
 Модальні вікна повинні мати клас .modal
 
