@@ -139,11 +139,14 @@ textarea{
 .block{display:block;}
 .hidden{display:none;}
 
+
+//main containers
 .wrapper{
 @include povh('');
 margin:0 auto;
 width:1000px;
 }
+
 .container{
 width:1000px;
 margin:0 auto;
