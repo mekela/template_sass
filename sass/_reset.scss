@@ -101,7 +101,7 @@ h6{font-size:14px;}
     @include button_gradient_hover('');
   }
 }
-input[type=text], input[type=email], input[type=phone], input[type=search]{
+input[type=text], input[type=email], input[type=phone], input[type=search], textarea{
    @include input('');
    &:focus{
      @include input_focus('');
@@ -113,6 +113,10 @@ input[type=text], input[type=email], input[type=phone], input[type=search]{
 }
 input::-webkit-input-placeholder {color: inherit;}
 input:-moz-placeholder {color: inherit;}
+textarea{
+  height: 90px;
+  padding-top: 5px;
+}
 //end buttons inputs
 
 .modal{
