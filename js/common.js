@@ -9,7 +9,7 @@ $(document).ready(function() {
 	});
 	
 	//placeholder
-	$('input[placeholder], textarea[placeholder]').placeholder();
+	$.support.placeholder = ('placeholder' in document.createElement('input'));
 
 	//bxslider
 	$('.bxslider').bxSlider({
