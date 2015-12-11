@@ -8,9 +8,6 @@ $(document).ready(function() {
 		}
 	});
 	
-	//placeholder
-	$.support.placeholder = ('placeholder' in document.createElement('input'));
-
 	//bxslider
 	$('.bxslider').bxSlider({
 	  nextSelector: '#slider-next',
