@@ -7,8 +7,6 @@ overflow: hidden;
 
 @mixin button($button){
   @include button_gradient('');
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
   border-radius: 28px;
   font-family: $ffamily;
   color: #ffffff;
@@ -16,6 +14,8 @@ overflow: hidden;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   border: none;
+  display: inline-block;
+  -webkit-appearance: none; 
 }
 @mixin button_gradient($button_gradient){
   background: #3498db;
@@ -44,6 +44,7 @@ overflow: hidden;
   font-family: $ffamily;
   border: 1px solid #000;
   border-radius: 3px;
+  resize:none;
 }
 @mixin input_focus($input_focus){
   box-shadow: 0 0 2px #99e6f9;
@@ -192,32 +193,6 @@ $breaklarge: 1180px;
   *zoom: 1;
 }
 
-@mixin placeholder-color($color) {
-  &:-moz-placeholder {
-    color: $color;
-  }
-  &::-webkit-input-placeholder {
-    color: $color;
-  }
-}
-
-@mixin placeholder {
-  &:-ms-input-placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &::-webkit-input-placeholder {
-    @content;
-  }
-  &::placeholder {
-    @content;
-  }
-}
 
 @mixin gray {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
