@@ -76,6 +76,18 @@ $medium:  'Clear Sans Medium';
 $left: left;
 $right: right;
 
+
+//mirror flip
+@mixin mirror_flip($mirror_flip){
+-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+transform: scale(-1, 1);
+filter: FlipH;
+-ms-filter: "FlipH"; 
+}
+
+
 //end my mixins
 
 
@@ -129,12 +141,10 @@ $breaklarge: 1180px;
 }
 
 //simple gradient
-@mixin g($color1, $color2) {
-  @include background-image(linear-gradient($color1, $color2));
-}
-
-@mixin gh($color1, $color2) {
-  @include background-image(linear-gradient(left, $color1, $color2));
+@mixin linear-gradient($direction, $color-stops) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
 }
 
 //add fast font-family

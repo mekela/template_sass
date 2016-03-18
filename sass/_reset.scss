@@ -81,6 +81,7 @@ body {
 a{
   text-decoration: underline;
   color: inherit;
+  cursor: pointer;
   &:hover{
     text-decoration: none;
   }

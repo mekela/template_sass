@@ -80,6 +80,7 @@ body {
 a {
   text-decoration: underline;
   color: inherit;
+  cursor: pointer;
 }
 a:hover {
   text-decoration: none;
