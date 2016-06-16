@@ -13,6 +13,7 @@ overflow: hidden;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  text-align: center;
   border: none;
   display: inline-block;
   -webkit-appearance: none; 
@@ -78,7 +79,7 @@ $right: right;
 
 
 //mirror flip
-@mixin mirror_flip($mirror_flip){
+@mixin mirror_flip(){
 -moz-transform: scale(-1, 1);
 -webkit-transform: scale(-1, 1);
 -o-transform: scale(-1, 1);
@@ -179,6 +180,7 @@ $breaklarge: 1180px;
   -ms-transition: $what;
   transition: $what;
 }
+//@include transition(all 0.5s);
 
 @mixin tr($what) {
   @include transition($what);
